@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "$schema": "../node_modules/@tauri-apps/cli/schema.json",
   "build": {
     "beforeDevCommand": "npm run dev",
@@ -57,6 +58,39 @@
         "decorations": true,
         "center": true
       }
+=======
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "crypto_profit_calculator",
+  "version": "0.1.0",
+  "identifier": "com.manroy.crypto-profit-calculator",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "CryptoCalc",
+        "width": 800,
+        "height": 600
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+>>>>>>> 260861565614d1c66c01d3882428b210e711800a
     ]
   }
 }

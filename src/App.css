@@ -211,6 +211,7 @@
   justify-content: space-between;
   margin-bottom: 14px;
   gap: 12px;
+<<<<<<< HEAD
   background: var(--bg-elevated);
   border-radius: var(--radius-md);
   padding: 10px 14px;
@@ -220,10 +221,13 @@
   display: flex;
   flex-direction: column;
   gap: 2px;
+=======
+>>>>>>> 260861565614d1c66c01d3882428b210e711800a
 }
 
 .php-rate-label {
   font-size: 12px;
+<<<<<<< HEAD
   font-weight: 500;
   color: var(--text-secondary);
 }
@@ -234,19 +238,34 @@
 }
 
 .php-rate-right {
+=======
+  color: var(--text-secondary);
+}
+
+.php-rate-display {
+>>>>>>> 260861565614d1c66c01d3882428b210e711800a
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
 .php-rate-value {
+<<<<<<< HEAD
   font-size: 15px;
   font-weight: 600;
   color: var(--accent);
+=======
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  min-width: 80px;
+  text-align: right;
+>>>>>>> 260861565614d1c66c01d3882428b210e711800a
 }
 
 .php-rate-value.loading {
   color: var(--text-muted);
+<<<<<<< HEAD
   font-size: 13px;
   font-weight: 400;
 }
@@ -279,6 +298,35 @@
 
 .btn-refresh:disabled {
   opacity: 0.4;
+=======
+  opacity: 0.7;
+}
+
+.btn-refresh {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.btn-refresh:hover:not(:disabled) {
+  background: var(--bg-hover);
+  border-color: var(--border-hover);
+  color: var(--text-primary);
+}
+
+.btn-refresh:disabled {
+  opacity: 0.5;
+>>>>>>> 260861565614d1c66c01d3882428b210e711800a
   cursor: not-allowed;
 }
 

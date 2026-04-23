@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "crypto-calc",
+=======
+  "name": "crypto_profit_calculator",
+>>>>>>> 260861565614d1c66c01d3882428b210e711800a
   "private": true,
   "version": "0.1.0",
   "type": "module",
@@ -10,6 +14,7 @@
     "tauri": "tauri"
   },
   "dependencies": {
+<<<<<<< HEAD
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "tauri": "^0.15.0"
@@ -20,5 +25,19 @@
     "@types/react-dom": "^18.2.0",
     "@vitejs/plugin-react": "^4.2.0",
     "vite": "^5.0.0"
+=======
+    "@fiahfy/icns": "^0.0.7",
+    "@tauri-apps/api": "^2",
+    "@tauri-apps/plugin-opener": "^2",
+    "png-to-ico": "^3.0.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "sharp": "^0.34.5"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2",
+    "@vitejs/plugin-react": "^4.6.0",
+    "vite": "^7.0.4"
+>>>>>>> 260861565614d1c66c01d3882428b210e711800a
   }
 }

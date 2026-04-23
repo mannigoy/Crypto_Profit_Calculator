@@ -1,9 +1,15 @@
 import { useState, useCallback, useEffect } from "react";
+<<<<<<< HEAD
 import "./App.css";
 
 const API_KEY = "f861d1c3bbe2356180766c42";
 const API_URL = `https://v6.exchangerate-api.com/v6/${API_KEY}/latest/USD`;
 
+=======
+import { invoke } from "@tauri-apps/api/core";
+import "./App.css";
+
+>>>>>>> 260861565614d1c66c01d3882428b210e711800a
 const fmt = (n, decimals = 4) =>
   isNaN(n) ? "—" : "$" + Math.abs(n).toFixed(decimals);
 const fmtPhp = (n) =>
@@ -28,6 +34,7 @@ export default function App() {
     setPhpRateLoading(true);
     setPhpRateError(null);
     try {
+<<<<<<< HEAD
       const res = await fetch(API_URL);
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const data = await res.json();
@@ -38,6 +45,13 @@ export default function App() {
     } catch (err) {
       console.error("PHP Rate fetch error:", err);
       setPhpRateError(err.message || "Failed to fetch rate");
+=======
+      const rate = await invoke('fetch_php_rate');
+      setPhpRate(parseFloat(rate).toFixed(2));
+    } catch (err) {
+      console.error("PHP Rate fetch error:", err);
+      setPhpRateError("Failed to fetch rate");
+>>>>>>> 260861565614d1c66c01d3882428b210e711800a
     } finally {
       setPhpRateLoading(false);
     }
@@ -47,6 +61,24 @@ export default function App() {
     fetchPhpRate();
   }, [fetchPhpRate]);
 
+<<<<<<< HEAD
+=======
+  const handleFeeInput = (e) => {
+    const val = parseFloat(e.target.value);
+    if (isNaN(val)) {
+      setFeeRate("");
+      return;
+    }
+    // Validate: must be > 0 and < 1
+    if (val > 0 && val < 1) {
+      setFeeRate(val.toFixed(2));
+    } else if (e.target.value) {
+      // Show invalid state but let user keep typing
+      setFeeRate(e.target.value);
+    }
+  };
+
+>>>>>>> 260861565614d1c66c01d3882428b210e711800a
   const calculate = useCallback(() => {
     const a = parseFloat(amount);
     const fee = parseFloat(feeRate) / 100;
@@ -108,14 +140,23 @@ export default function App() {
 
       <main className="main">
         <div className="col">
+<<<<<<< HEAD
+=======
+          {/* Trade Details */}
+>>>>>>> 260861565614d1c66c01d3882428b210e711800a
           <section className="card">
             <div className="card-label">Trade details</div>
             <div className="input-grid">
               <Field label="Trade amount" hint="In USDT / quote currency" prefix="$">
                 <input type="number" value={amount} onChange={e => setAmount(e.target.value)} />
               </Field>
+<<<<<<< HEAD
               <Field label="Fee rate" hint="e.g. 0.10 for Binance" suffix="%">
                 <input type="number" value={feeRate} step="0.01" min="0.01" max="1" onChange={e => setFeeRate(e.target.value)} />
+=======
+              <Field label="Fee rate" hint="Must be between 0 and 1" suffix="%">
+                <input type="number" value={feeRate} step="0.01" min="0" max="1" onChange={handleFeeInput} />
+>>>>>>> 260861565614d1c66c01d3882428b210e711800a
               </Field>
               <Field label="Buy price" hint="Entry / open price" prefix="$">
                 <input type="number" value={buyPrice} onChange={e => setBuyPrice(e.target.value)} />
@@ -125,6 +166,7 @@ export default function App() {
               </Field>
             </div>
 
+<<<<<<< HEAD
             <div className="php-rate-row">
               <div className="php-rate-left">
                 <span className="php-rate-label">USD → PHP live rate</span>
@@ -138,6 +180,18 @@ export default function App() {
                   <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                     <path d="M12 7A5 5 0 1 1 7 2a5 5 0 0 1 3.54 1.46L12 2v4H8l1.3-1.3A3 3 0 1 0 10 7" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
+=======
+
+
+            <div className="php-rate-row">
+              <span className="php-rate-label">PHP rate (₱ per $1)</span>
+              <div className="php-rate-display">
+                <span className={`php-rate-value ${phpRateLoading ? "loading" : ""}`}>
+                  {phpRateLoading ? "Loading..." : phpRateError ? `Error: ${phpRateError}` : `₱${phpRate}`}
+                </span>
+                <button className="btn-refresh" onClick={fetchPhpRate} disabled={phpRateLoading} title="Refresh exchange rate">
+                  {phpRateLoading ? "⟳" : "⟳"}
+>>>>>>> 260861565614d1c66c01d3882428b210e711800a
                 </button>
               </div>
             </div>
@@ -147,6 +201,10 @@ export default function App() {
             </button>
           </section>
 
+<<<<<<< HEAD
+=======
+          {/* Target Sell Price */}
+>>>>>>> 260861565614d1c66c01d3882428b210e711800a
           <section className="card">
             <div className="card-label">Target sell price</div>
             <p className="card-desc">Enter your desired profit to find the required sell price.</p>
@@ -174,6 +232,10 @@ export default function App() {
           </section>
         </div>
 
+<<<<<<< HEAD
+=======
+        {/* Results */}
+>>>>>>> 260861565614d1c66c01d3882428b210e711800a
         <div className="col">
           {results ? (
             <section className="card results-card">
