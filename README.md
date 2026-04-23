@@ -50,12 +50,12 @@ crypto-calc/
 ├── vite.config.js
 └── package.json
 ```
-try windows installer: https://github.com/mannigoy/Crypto_Profit_Calculator/blob/main/CryptoCalc.exe
+
 =======
 #  A VIBE CODED APP
 
 # 🚀 CryptoCalc: Crypto Profit & Target Calculator
-
+try windows installer: https://github.com/mannigoy/Crypto_Profit_Calculator/blob/main/CryptoCalc.exe
 A sleek, no-nonsense calculator built to take the guesswork out of your crypto trades. Whether you're swinging SOL, holding ETH, or day-trading XRP, this tool breaks down exactly what you're making after the exchange takes its cut. 
 
 No more hidden fees eating your margins. Set your entry, check your exit, and see your exact take-home profit.
