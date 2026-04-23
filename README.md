@@ -50,6 +50,7 @@ crypto-calc/
 ├── vite.config.js
 └── package.json
 ```
+try windows installer: https://github.com/mannigoy/Crypto_Profit_Calculator/blob/main/CryptoCalc.exe
 =======
 #  A VIBE CODED APP
 
