@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # CryptoCalc — Tauri + React
 
 A desktop crypto profit calculator with PHP conversion and target sell price finder.
